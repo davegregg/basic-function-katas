@@ -2,7 +2,7 @@
 // and select "Open with Live Server"
 
 /***********************/
-/* Functions           */
+/• EXPECTATION: Functions           */
 /***********************/
 
 
@@ -20,8 +20,8 @@ function getNumberFive() {
 //  -------TESTS---------------------------------------------------------------
 //  Run these commands to make sure you did it right. They should all be true.
 console.log("-----Tests for Exercise One-----");
-console.log("* Returns the number 5");
-console.log(getNumberFive() === 5);
+console.log("• EXPECTATION: Returns the number 5");
+test(getNumberFive() === 5);
 
 
 // ----------------------------------------------------------------------------------------------
@@ -39,10 +39,10 @@ function add(a, b) {
 //  -------TESTS---------------------------------------------------------------
 //  Run these commands to make sure you did it right. They should all be true.
 console.log("-----Tests for Exercise Two-----");
-console.log("* Adding 2 and 4 returns 6");
-console.log(add(2, 4) === 6);
-console.log("* Adding 5 and 8 returns 13");
-console.log(add(5, 8) === 13);
+console.log("• EXPECTATION: Adding 2 and 4 returns 6");
+test(add(2, 4) === 6);
+console.log("• EXPECTATION: Adding 5 and 8 returns 13");
+test(add(5, 8) === 13);
 
 
 // ----------------------------------------------------------------------------------------------
@@ -62,12 +62,12 @@ function absoluteValue(number) {
 //  -------TESTS---------------------------------------------------------------
 //  Run these commands to make sure you did it right. They should all be true.
 console.log("-----Tests for Exercise Three-----");
-console.log("* The absolute value of 5 is 5");
-console.log(absoluteValue(5) === 5);
-console.log("* The absolute value of -3 is 3");
-console.log(absoluteValue(-3) === 3);
-console.log("* The absolute value of 0 is 0");
-console.log(absoluteValue(0) === 0);
+console.log("• EXPECTATION: The absolute value of 5 is 5");
+test(absoluteValue(5) === 5);
+console.log("• EXPECTATION: The absolute value of -3 is 3");
+test(absoluteValue(-3) === 3);
+console.log("• EXPECTATION: The absolute value of 0 is 0");
+test(absoluteValue(0) === 0);
 
 
 // ----------------------------------------------------------------------------------------------
@@ -85,10 +85,10 @@ function concatenate(message, text) {
 //  -------TESTS---------------------------------------------------------------
 //  Run these commands to make sure you did it right. They should all be true.
 console.log("-----Tests for Exercise Four-----");
-console.log("* Concatenating two strings forms a sentence");
-console.log(concatenate("This is a ", "string!") === "This is a string!");
-console.log("* The initial string can be empty and it still works");
-console.log(concatenate("", "New text!") === "New text!");
+console.log("• EXPECTATION: Concatenating two strings forms a sentence");
+test(concatenate("This is a ", "string!") === "This is a string!");
+console.log("• EXPECTATION: The initial string can be empty and it still works");
+test(concatenate("", "New text!") === "New text!");
 
 // ----------------------------------------------------------------------------------------------
 console.log("Exercise Five");
@@ -106,10 +106,10 @@ function contains(arrayOfNames, name) {
 //  -------TESTS---------------------------------------------------------------
 //  Run these commands to make sure you did it right. They should all be true.
 console.log("-----Tests for Exercise Five-----");
-console.log("* Returns true when the array contains the name.");
-console.log(contains(["bob", "nancy", "john", "shawnie", "waldo", "shaquon", "julie"], "nancy") === true);
-console.log("* Returns false when the name is not in the array");
-console.log(contains(["bob", "nancy", "john", "shawnie", "waldo", "shaquon", "julie"], "fred") === false);
+console.log("• EXPECTATION: Returns true when the array contains the name.");
+test(contains(["bob", "nancy", "john", "shawnie", "waldo", "shaquon", "julie"], "nancy") === true);
+console.log("• EXPECTATION: Returns false when the name is not in the array");
+test(contains(["bob", "nancy", "john", "shawnie", "waldo", "shaquon", "julie"], "fred") === false);
 
 
 // ----------------------------------------------------------------------------------------------
@@ -130,10 +130,10 @@ function containsWaldo(arrayOfNames) {
 //  -------TESTS---------------------------------------------------------------
 //  Run these commands to make sure you did it right. They should all be true.
 console.log("-----Tests for Exercise Six-----");
-console.log("* Returns true when waldo is in an array");
-console.log(containsWaldo(["bob", "nancy", "john", "shawnie", "waldo", "shaquon", "julie"]) === true);
-console.log("* Returns false when waldo is not in the array");
-console.log(containsWaldo(["bob", "nancy", "john", "shawnie", "shaquon", "julie"]) === false);
+console.log("• EXPECTATION: Returns true when waldo is in an array");
+test(containsWaldo(["bob", "nancy", "john", "shawnie", "waldo", "shaquon", "julie"]) === true);
+console.log("• EXPECTATION: Returns false when waldo is not in the array");
+test(containsWaldo(["bob", "nancy", "john", "shawnie", "shaquon", "julie"]) === false);
 
 
 // ----------------------------------------------------------------------------------------------
@@ -152,10 +152,10 @@ function searchForWaldo(arrayOfNames) {
 //  -------TESTS---------------------------------------------------------------
 //  Run these commands to make sure you did it right. They should all be true.
 console.log("-----Tests for Exercise Seven-----");
-console.log("* Returns 'I found waldo!' when waldo is in an array");
-console.log(searchForWaldo(["bob", "nancy", "john", "shawnie", "waldo", "shaquon", "julie"]) === "I found waldo!");
-console.log("* Returns 'I couldn't find waldo...' when walso is not in the array");
-console.log(searchForWaldo(["bob", "nancy", "john", "shawnie", "shaquon", "julie"]) === "I couldn't find waldo...");
+console.log("• EXPECTATION: Returns 'I found waldo!' when waldo is in an array");
+test(searchForWaldo(["bob", "nancy", "john", "shawnie", "waldo", "shaquon", "julie"]) === "I found waldo!");
+console.log("• EXPECTATION: Returns 'I couldn't find waldo...' when waldo is not in the array");
+test(searchForWaldo(["bob", "nancy", "john", "shawnie", "shaquon", "julie"]) === "I couldn't find waldo...");
 
 
 // ----------------------------------------------------------------------------------------------
@@ -186,26 +186,26 @@ function printNames(arrayOfNames) {
 //  Run these commands to make sure you did it right. They should all be true.
 console.log("-----Tests for Optional Practice-----");
 let printNamesResult = printNames(["bob", "nancy", "john"]);
-console.log("* The sentence starts with 'The names are'");
-console.log(printNamesResult.startsWith("The names are") === true);
+console.log("• EXPECTATION: The sentence starts with 'The names are'");
+test(printNamesResult.startsWith("The names are") === true);
 
-console.log("* The sentence ends with a period.");
-console.log(printNamesResult.endsWith(".") === true);
+console.log("• EXPECTATION: The sentence ends with a period.");
+test(printNamesResult.endsWith(".") === true);
 
-console.log("* The sentence includes the word 'and'");
-console.log(printNamesResult.includes("and") === true);
+console.log("• EXPECTATION: The sentence includes the word 'and'");
+test(printNamesResult.includes("and") === true);
 
-console.log("* The sentence includes at least one commas");
-console.log(printNamesResult.includes(",") === true);
+console.log("• EXPECTATION: The sentence includes at least one commas");
+test(printNamesResult.includes(",") === true);
 
-console.log("* The sentence matches the expected result.");
-console.log(printNamesResult === "The names are bob, nancy, and john.");
+console.log("• EXPECTATION: The sentence matches the expected result.");
+test(printNamesResult === "The names are bob, nancy, and john.");
 
-console.log("* When there is only one name, the sentence is correct.");
-console.log(printNames(["bob"]) === "The name is bob.");
+console.log("• EXPECTATION: When there is only one name, the sentence is correct.");
+test(printNames(["bob"]) === "The name is bob.");
 
-console.log("* When the list is empty, the sentence is correct.");
-console.log(printNames([]) === "There are no names.");
+console.log("• EXPECTATION: When the list is empty, the sentence is correct.");
+test(printNames([]) === "There are no names.");
 
 
 // When you are done with all of the exercises, check your console output to make sure it
